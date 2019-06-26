@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		238EC55222C4153F00F4145F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55122C4153F00F4145F /* Networking.swift */; };
+		238EC55422C41BEE00F4145F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55322C41BEE00F4145F /* NetworkError.swift */; };
+		238EC55622C41E8600F4145F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55522C41E8600F4145F /* Result.swift */; };
 		C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */; };
 		C0B3F6B822C3FF05009153C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6B722C3FF05009153C3 /* ViewController.swift */; };
 		C0B3F6BB22C3FF05009153C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B3F6B922C3FF05009153C3 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		238EC55122C4153F00F4145F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		238EC55322C41BEE00F4145F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		238EC55522C41E8600F4145F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C0B3F6B222C3FF05009153C3 /* Globant3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globant3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0B3F6B722C3FF05009153C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		238EC55022C4151800F4145F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				238EC55122C4153F00F4145F /* Networking.swift */,
+				238EC55322C41BEE00F4145F /* NetworkError.swift */,
+				238EC55522C41E8600F4145F /* Result.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C0B3F6A922C3FF05009153C3 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +115,7 @@
 		C0B3F6B422C3FF05009153C3 /* Globant3 */ = {
 			isa = PBXGroup;
 			children = (
+				238EC55022C4151800F4145F /* Services */,
 				C0B3F6E322C40781009153C3 /* View */,
 				C0B3F6E422C40787009153C3 /* ViewModels */,
 				C0B3F6E522C407A4009153C3 /* Extras */,
@@ -308,6 +325,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238EC55222C4153F00F4145F /* Networking.swift in Sources */,
+				238EC55622C41E8600F4145F /* Result.swift in Sources */,
+				238EC55422C41BEE00F4145F /* NetworkError.swift in Sources */,
 				C0B3F6B822C3FF05009153C3 /* ViewController.swift in Sources */,
 				C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */,
 			);
@@ -493,6 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/7fb83fff7e23d2769f7269e8dac893432f7a8950/PersonalInfo.json";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -510,6 +531,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/7fb83fff7e23d2769f7269e8dac893432f7a8950/PersonalInfo.json";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
