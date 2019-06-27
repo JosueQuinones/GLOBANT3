@@ -21,7 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOh-93-drf">
                                 <rect key="frame" x="0.0" y="64" width="375" height="1636"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-el-68O">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-el-68O" customClass="CardView" customModule="Globant3" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="355" height="230"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2sU-m1-cpt" customClass="BoundImageView" customModule="Globant3" customModuleProvider="target">
@@ -115,8 +115,14 @@
                                             <constraint firstAttribute="height" constant="230" id="rjL-do-QCD"/>
                                             <constraint firstItem="jIS-93-IeO" firstAttribute="leading" secondItem="2sU-m1-cpt" secondAttribute="trailing" constant="8" id="yU8-St-Wpx"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="addGradient" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLm-tg-ThA">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLm-tg-ThA" customClass="CardView" customModule="Globant3" customModuleProvider="target">
                                         <rect key="frame" x="10" y="248" width="355" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96Q-M5-6nj">
@@ -151,8 +157,14 @@
                                             <constraint firstItem="WRS-Pz-tF8" firstAttribute="leading" secondItem="RLm-tg-ThA" secondAttribute="leading" constant="8" id="ZOx-cx-oGG"/>
                                             <constraint firstAttribute="height" priority="1" constant="230" id="ynw-Uf-BRp"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="addGradient" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-Hr-ezq">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-Hr-ezq" customClass="CardView" customModule="Globant3" customModuleProvider="target">
                                         <rect key="frame" x="10" y="325.5" width="355" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18b-QQ-OqW">
@@ -198,8 +210,14 @@
                                             <constraint firstItem="18b-QQ-OqW" firstAttribute="leading" secondItem="jlh-Hr-ezq" secondAttribute="leading" constant="8" id="tkh-9k-Zj0"/>
                                             <constraint firstAttribute="bottom" secondItem="QFt-mk-2q0" secondAttribute="bottom" constant="8" id="zoW-ry-JOY"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="addGradient" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-tL-w4C">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-tL-w4C" customClass="CardView" customModule="Globant3" customModuleProvider="target">
                                         <rect key="frame" x="10" y="403" width="355" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programming title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGe-qX-EEL">
@@ -245,8 +263,14 @@
                                             <constraint firstItem="NFH-1J-hxJ" firstAttribute="top" secondItem="WGe-qX-EEL" secondAttribute="bottom" constant="3" id="pF5-XD-R5O"/>
                                             <constraint firstItem="NFH-1J-hxJ" firstAttribute="leading" secondItem="nOk-tL-w4C" secondAttribute="leading" constant="8" id="yt2-7K-xrk"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="addGradient" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9s-4v-r0B">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9s-4v-r0B" customClass="CardView" customModule="Globant3" customModuleProvider="target">
                                         <rect key="frame" x="10" y="480.5" width="355" height="110.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tG-E9-rhr">
@@ -326,8 +350,14 @@
                                             <constraint firstAttribute="height" priority="1" constant="230" id="nti-qX-N62"/>
                                             <constraint firstItem="0tG-E9-rhr" firstAttribute="leading" secondItem="f9s-4v-r0B" secondAttribute="leading" constant="8" id="waE-iu-jET"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="addGradient" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJA-Vw-5xg">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJA-Vw-5xg" customClass="CardView" customModule="Globant3" customModuleProvider="target">
                                         <rect key="frame" x="10" y="599" width="355" height="110.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqc-T6-7Fa">
@@ -407,9 +437,15 @@
                                             <constraint firstAttribute="height" priority="1" constant="230" id="mjq-AH-U0w"/>
                                             <constraint firstAttribute="trailing" secondItem="vnT-Ky-0sK" secondAttribute="trailing" constant="8" id="qGH-9j-tsW"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="addGradient" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.86666666670000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.90588235294117647" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5gE-el-68O" secondAttribute="trailing" constant="10" id="CKh-ap-HJN"/>
                                     <constraint firstItem="nOk-tL-w4C" firstAttribute="leading" secondItem="YOh-93-drf" secondAttribute="leading" constant="10" id="JJr-9a-fA2"/>
@@ -485,6 +521,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n2g-aq-LAR">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.86666666670000003" green="0.90588235289999997" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
