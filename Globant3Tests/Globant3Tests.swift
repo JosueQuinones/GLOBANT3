@@ -1,10 +1,6 @@
 //
 //  Globant3Tests.swift
 //  Globant3Tests
-//
-//  Created by Ernesto Daniel Mejia Valdiviezo on 6/26/19.
-//  Copyright © 2019 Ernesto Daniel Mejia Valdiviezo. All rights reserved.
-//
 
 import XCTest
 @testable import Globant3

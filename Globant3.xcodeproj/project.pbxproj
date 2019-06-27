@@ -10,6 +10,9 @@
 		238EC55222C4153F00F4145F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55122C4153F00F4145F /* Networking.swift */; };
 		238EC55422C41BEE00F4145F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55322C41BEE00F4145F /* NetworkError.swift */; };
 		238EC55622C41E8600F4145F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55522C41E8600F4145F /* Result.swift */; };
+		238EC55922C439E300F4145F /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55822C439E300F4145F /* Information.swift */; };
+		238EC55B22C446FB00F4145F /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55A22C446FB00F4145F /* String+Localize.swift */; };
+		238EC55C22C4475C00F4145F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 238EC55E22C4475C00F4145F /* Localizable.strings */; };
 		C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */; };
 		C0B3F6B822C3FF05009153C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6B722C3FF05009153C3 /* ViewController.swift */; };
 		C0B3F6BB22C3FF05009153C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B3F6B922C3FF05009153C3 /* Main.storyboard */; };
@@ -17,7 +20,6 @@
 		C0B3F6C022C3FF07009153C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B3F6BE22C3FF07009153C3 /* LaunchScreen.storyboard */; };
 		C0B3F6CB22C3FF07009153C3 /* Globant3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6CA22C3FF07009153C3 /* Globant3Tests.swift */; };
 		C0B3F6D622C3FF07009153C3 /* Globant3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6D522C3FF07009153C3 /* Globant3UITests.swift */; };
-		C0B3F6EA22C40A99009153C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0B3F6E922C40A99009153C3 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,9 @@
 		238EC55122C4153F00F4145F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		238EC55322C41BEE00F4145F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		238EC55522C41E8600F4145F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		238EC55822C439E300F4145F /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		238EC55A22C446FB00F4145F /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Localize.swift"; path = "Globant3/String+Localize.swift"; sourceTree = SOURCE_ROOT; };
+		238EC55D22C4475C00F4145F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C0B3F6B222C3FF05009153C3 /* Globant3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globant3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0B3F6B722C3FF05009153C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +59,6 @@
 		C0B3F6D122C3FF07009153C3 /* Globant3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Globant3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B3F6D522C3FF07009153C3 /* Globant3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globant3UITests.swift; sourceTree = "<group>"; };
 		C0B3F6D722C3FF07009153C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0B3F6E922C40A99009153C3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		238EC55722C439C700F4145F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				238EC55822C439E300F4145F /* Information.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C0B3F6A922C3FF05009153C3 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +127,7 @@
 		C0B3F6B422C3FF05009153C3 /* Globant3 */ = {
 			isa = PBXGroup;
 			children = (
+				238EC55722C439C700F4145F /* Model */,
 				238EC55022C4151800F4145F /* Services */,
 				C0B3F6E322C40781009153C3 /* View */,
 				C0B3F6E422C40787009153C3 /* ViewModels */,
@@ -162,6 +175,7 @@
 		C0B3F6E522C407A4009153C3 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				238EC55A22C446FB00F4145F /* String+Localize.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -172,7 +186,7 @@
 				C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */,
 				C0B3F6BC22C3FF07009153C3 /* Assets.xcassets */,
 				C0B3F6C122C3FF07009153C3 /* Info.plist */,
-				C0B3F6E922C40A99009153C3 /* Localizable.strings */,
+				238EC55E22C4475C00F4145F /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -298,7 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B3F6C022C3FF07009153C3 /* LaunchScreen.storyboard in Resources */,
-				C0B3F6EA22C40A99009153C3 /* Localizable.strings in Resources */,
+				238EC55C22C4475C00F4145F /* Localizable.strings in Resources */,
 				C0B3F6BD22C3FF07009153C3 /* Assets.xcassets in Resources */,
 				C0B3F6BB22C3FF05009153C3 /* Main.storyboard in Resources */,
 			);
@@ -325,8 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238EC55922C439E300F4145F /* Information.swift in Sources */,
 				238EC55222C4153F00F4145F /* Networking.swift in Sources */,
 				238EC55622C41E8600F4145F /* Result.swift in Sources */,
+				238EC55B22C446FB00F4145F /* String+Localize.swift in Sources */,
 				238EC55422C41BEE00F4145F /* NetworkError.swift in Sources */,
 				C0B3F6B822C3FF05009153C3 /* ViewController.swift in Sources */,
 				C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */,
@@ -365,6 +381,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		238EC55E22C4475C00F4145F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238EC55D22C4475C00F4145F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C0B3F6B922C3FF05009153C3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -513,7 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/7fb83fff7e23d2769f7269e8dac893432f7a8950/PersonalInfo.json";
+				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/567393f3a3bedc9f915baa3020a06707fdb2e8ac/PersonalInfo.json";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -531,7 +555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/7fb83fff7e23d2769f7269e8dac893432f7a8950/PersonalInfo.json";
+				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/567393f3a3bedc9f915baa3020a06707fdb2e8ac/PersonalInfo.json";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
