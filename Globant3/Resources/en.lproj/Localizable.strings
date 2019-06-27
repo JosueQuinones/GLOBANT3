@@ -4,12 +4,17 @@
 */
 
 /* Titles */
-"main_title" = "AppoutMe 👤";
+"main_title" = "My Info 👤";
 "skills_title" = "Skills";
 "work_experience_title" = "Work Experience";
 "programming_languages_title" = "Programming Languages 💻";
 "school_summary_title" = "Education 📚";
 "contact_info_title" = "Contact Info 📞";
+
+/* WorkView Labels*/
+"name_title" = "Name:";
+"date_title" = "Date:";
+"description_title" = "Description:";
 
 /* Error */
 "Error" = "Something went wrong.";

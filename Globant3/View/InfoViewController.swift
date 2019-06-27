@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  Globant3
 //
-//  Copyright © 2019 Ernesto Daniel Mejia Valdiviezo. All rights reserved.
 //
 
 import UIKit
@@ -10,27 +9,27 @@ import UIKit
 class InfoViewController: UIViewController {
     
     //MARK: - IBOutlets
-    @IBOutlet weak var userImageView: BoundImageView!
-    @IBOutlet weak var firstNameLbl: BoundLabel!
-    @IBOutlet weak var lastNameLbl: BoundLabel!
-    @IBOutlet weak var ageLbl: BoundLabel!
-    @IBOutlet weak var cityLbl: BoundLabel!
-    @IBOutlet weak var skillsLbl: BoundLabel!
-    @IBOutlet weak var universityLbl: BoundLabel!
-    @IBOutlet weak var careerLbl: BoundLabel!
-    @IBOutlet weak var generationLbl: BoundLabel!
-    @IBOutlet weak var emailLbl: BoundLabel!
-    @IBOutlet weak var cellPhoneLbl: BoundLabel!
-    @IBOutlet weak var linkedInLbl: BoundLabel!
+    @IBOutlet weak var userImageView: BoundImageView?
+    @IBOutlet weak var firstNameLbl: BoundLabel?
+    @IBOutlet weak var lastNameLbl: BoundLabel?
+    @IBOutlet weak var ageLbl: BoundLabel?
+    @IBOutlet weak var cityLbl: BoundLabel?
+    @IBOutlet weak var skillsLbl: BoundLabel?
+    @IBOutlet weak var universityLbl: BoundLabel?
+    @IBOutlet weak var careerLbl: BoundLabel?
+    @IBOutlet weak var generationLbl: BoundLabel?
+    @IBOutlet weak var emailLbl: BoundLabel?
+    @IBOutlet weak var cellPhoneLbl: BoundLabel?
+    @IBOutlet weak var linkedInLbl: BoundLabel?
     @IBOutlet weak var workStackView: UIStackView?
-    @IBOutlet weak var programmingStackView: UIStackView!
+    @IBOutlet weak var programmingStackView: UIStackView?
     
     //MARK: - Titles outletd
-    @IBOutlet weak var skillsTitleLbl: UILabel!
-    @IBOutlet weak var workTitleLbl: UILabel!
-    @IBOutlet weak var programmingTitleLbl: UILabel!
-    @IBOutlet weak var educationTitleLbl: UILabel!
-    @IBOutlet weak var contactTitleLbl: UILabel!
+    @IBOutlet weak var skillsTitleLbl: UILabel?
+    @IBOutlet weak var workTitleLbl: UILabel?
+    @IBOutlet weak var programmingTitleLbl: UILabel?
+    @IBOutlet weak var educationTitleLbl: UILabel?
+    @IBOutlet weak var contactTitleLbl: UILabel?
     
     
     
@@ -48,7 +47,8 @@ class InfoViewController: UIViewController {
         configure()
         infoViewModel.petition()
     }
-
+    
+    //MARK: - Configure Views
     func configure() {
         configureMainView()
         configureSkillsView()
@@ -57,24 +57,28 @@ class InfoViewController: UIViewController {
         configureImageView()
     }
     
+    //MARK: - Configure ImageView
     func configureImageView() {
-        userImageView.bind(to: infoViewModel.photo)
+        userImageView?.bind(to: infoViewModel.photo)
     }
-
+    
+    //MARK: - Configure MainView
     func configureMainView() {
-        firstNameLbl.bind(to: infoViewModel.name)
-        lastNameLbl.bind(to: infoViewModel.lastname)
-        ageLbl.bind(to: infoViewModel.age)
-        cityLbl.bind(to: infoViewModel.city)
+        firstNameLbl?.bind(to: infoViewModel.name)
+        lastNameLbl?.bind(to: infoViewModel.lastname)
+        ageLbl?.bind(to: infoViewModel.age)
+        cityLbl?.bind(to: infoViewModel.city)
     }
     
+    //MARK: - Configure SkillsView
     func configureSkillsView() {
-        skillsTitleLbl.text = "skills_title".localize()
-        skillsLbl.bind(to: infoViewModel.skills)
+        skillsTitleLbl?.text = "skills_title".localize()
+        skillsLbl?.bind(to: infoViewModel.skills)
     }
     
+    //MARK: - Configure WorkView
     func configureWorkView() {
-        workTitleLbl.text = "work_experience_title".localize()
+        workTitleLbl?.text = "work_experience_title".localize()
         guard let workStackView = workStackView else { return }
         workStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
@@ -83,7 +87,7 @@ class InfoViewController: UIViewController {
         infoViewModel.works.forEach { workExperience in
             let nameJobTitle = UILabel()
             nameJobTitle.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            nameJobTitle.text = "Name: "
+            nameJobTitle.text = "name_title".localize()
             titles.append(nameJobTitle)
             nameJobTitle.numberOfLines = 0
             
@@ -94,7 +98,7 @@ class InfoViewController: UIViewController {
             
             let dateTitle = UILabel()
             dateTitle.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            dateTitle.text = "Start date: "
+            dateTitle.text = "date_title".localize()
             titles.append(dateTitle)
             dateTitle.numberOfLines = 0
             
@@ -105,7 +109,7 @@ class InfoViewController: UIViewController {
             
             let descriptionTitle = UILabel()
             descriptionTitle.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            descriptionTitle.text = "Description: "
+            descriptionTitle.text = "description_title".localize()
             descriptionTitle.numberOfLines = 0
             titles.append(descriptionTitle)
             
@@ -140,9 +144,9 @@ class InfoViewController: UIViewController {
         }
     }
     
-    
+    //MARK: - Configure ProgrammingView
     func configureProgrammingView() {
-        programmingTitleLbl.text = "programming_languages_title".localize()
+        programmingTitleLbl?.text = "programming_languages_title".localize()
         guard let programmingStackView = programmingStackView else { return }
         programmingStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
@@ -168,18 +172,20 @@ class InfoViewController: UIViewController {
         }
     }
     
+    //MARK: - Configure EducationView
     func configureEducationView () {
-        educationTitleLbl.text = "school_summary_title".localize()
-        universityLbl.bind(to: infoViewModel.university)
-        careerLbl.bind(to: infoViewModel.career)
-        generationLbl.bind(to: infoViewModel.generation)
+        educationTitleLbl?.text = "school_summary_title".localize()
+        universityLbl?.bind(to: infoViewModel.university)
+        careerLbl?.bind(to: infoViewModel.career)
+        generationLbl?.bind(to: infoViewModel.generation)
     }
     
+    //MARK: - Configure ContactView
     func configureContactView(){
-        contactTitleLbl.text = "contact_info_title".localize()
-        emailLbl.bind(to: infoViewModel.email)
-        cellPhoneLbl.bind(to: infoViewModel.cellphone)
-        linkedInLbl.bind(to: infoViewModel.linkedin)
+        contactTitleLbl?.text = "contact_info_title".localize()
+        emailLbl?.bind(to: infoViewModel.email)
+        cellPhoneLbl?.bind(to: infoViewModel.cellphone)
+        linkedInLbl?.bind(to: infoViewModel.linkedin)
     }
 }
 
