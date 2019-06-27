@@ -15,11 +15,6 @@ class Globant3Tests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
@@ -27,4 +22,9 @@ class Globant3Tests: XCTestCase {
         }
     }
 
+    
+    //MARK: - Extra methods
+    func createTestData() -> Information {
+        return Information(firstName: "Globant", lastName: "3", age: "5", city: "Mexico", photo: "https://www.gqmiddleeast.com/sites/default/files/gqme/styles/766_431_landscape/public/images/2019/04/21/John-Wick-Keanu-Reeves.jpg?itok=tJwVSoRn", skills: [String](), contactInfo: ContactInfo(email: "globant@", cellphone: "55338811", linkedIn: "link"), programming: [[String]](), schoolSummary: SchoolSummary(university: "university", career: "career", generation: "generation"), workExperience: [[String]]())
+    }
 }

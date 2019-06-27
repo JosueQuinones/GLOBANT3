@@ -6,9 +6,6 @@ import UIKit
 
 public class Networking {
     
-    //MARK: - Singletone
-    public static var shared = Networking()
-    
     //MARK: - Information required for API
     private var baseURLString: String?
     private var endpoint: String?
@@ -17,7 +14,7 @@ public class Networking {
     private var defaultSession = URLSession(configuration: .default)
     private var dataTask: URLSessionDataTask?
     
-    private init() {
+    init() {
         baseURLString = getServerURL(from: "ServerURL")
     }
     

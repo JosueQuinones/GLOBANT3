@@ -12,6 +12,9 @@ public class InformationViewModel {
     //MARK: - Model instance
     var information: Information?
     
+    //MARK: - Class variables
+    private var network = Networking()
+    
     //MARK: - Main info
     var name: Observable<String> = Observable("")
     var lastname: Observable<String> = Observable("")
@@ -45,7 +48,7 @@ public class InformationViewModel {
 extension InformationViewModel {
     func petition() {
         var information: Information? = Information(firstName: "", lastName: "", age: "", city: "", photo: nil, skills: [String](), contactInfo: ContactInfo(email: "", cellphone: "", linkedIn: ""), programming: [[String]](), schoolSummary: SchoolSummary(university: "", career: "", generation: ""), workExperience: [[String]]())
-        Networking.shared.getModel(model: information!) { [weak self] model in
+        network.getModel(model: information!) { [weak self] model in
             self?.information = model
             DispatchQueue.main.async {
                 self?.updateValues()
@@ -56,7 +59,7 @@ extension InformationViewModel {
     
     func requestPhoto(from urlString: String?){
         guard let url = urlString, let urlPhoto = URL(string: url) else { return }
-        Networking.shared.getImage(from: urlPhoto) { [weak self] image in
+        network.getImage(from: urlPhoto) { [weak self] image in
             DispatchQueue.main.async {
                 self?.photo.value = image
             }
