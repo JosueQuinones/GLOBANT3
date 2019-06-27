@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -419,7 +419,7 @@
                                     <constraint firstItem="RLm-tg-ThA" firstAttribute="width" secondItem="YOh-93-drf" secondAttribute="width" constant="-20" id="WBt-VS-FFT"/>
                                     <constraint firstItem="5gE-el-68O" firstAttribute="top" secondItem="YOh-93-drf" secondAttribute="top" constant="10" id="aQr-c7-sxH"/>
                                     <constraint firstItem="nOk-tL-w4C" firstAttribute="width" secondItem="YOh-93-drf" secondAttribute="width" constant="-20" id="bCc-sq-PAb"/>
-                                    <constraint firstAttribute="bottom" secondItem="vJA-Vw-5xg" secondAttribute="bottom" constant="956" id="bee-C7-pbC"/>
+                                    <constraint firstAttribute="bottom" secondItem="vJA-Vw-5xg" secondAttribute="bottom" constant="20" id="bee-C7-pbC"/>
                                     <constraint firstAttribute="trailing" secondItem="jlh-Hr-ezq" secondAttribute="trailing" constant="10" id="ccM-m7-cQU"/>
                                     <constraint firstItem="f9s-4v-r0B" firstAttribute="width" secondItem="YOh-93-drf" secondAttribute="width" constant="-20" id="djg-Rt-vCh"/>
                                     <constraint firstItem="5gE-el-68O" firstAttribute="width" secondItem="YOh-93-drf" secondAttribute="width" constant="-20" id="ev3-Wd-EhU"/>
