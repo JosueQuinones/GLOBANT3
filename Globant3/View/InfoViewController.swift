@@ -41,6 +41,10 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         title = "main_title".localize()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        infoViewModel.onFinish = { [weak self] in
+            self?.configureWorkView()
+            self?.configureProgrammingView()
+        }
         configure()
         infoViewModel.petition()
     }
@@ -48,8 +52,6 @@ class InfoViewController: UIViewController {
     func configure() {
         configureMainView()
         configureSkillsView()
-        configureWorkView()
-        configureProgrammingView()
         configureEducationView()
         configureContactView()
         configureImageView()
@@ -87,7 +89,7 @@ class InfoViewController: UIViewController {
             
             let nameJob = BoundLabel()
             nameJob.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            nameJob.bind(to: workExperience[0])
+            nameJob.text = workExperience[0]
             nameJobTitle.numberOfLines = 0
             
             let dateTitle = UILabel()
@@ -98,7 +100,7 @@ class InfoViewController: UIViewController {
             
             let date = BoundLabel()
             date.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            date.bind(to: workExperience[1])
+            date.text = workExperience[1]
             date.numberOfLines = 0
             
             let descriptionTitle = UILabel()
@@ -110,7 +112,7 @@ class InfoViewController: UIViewController {
             let description = BoundLabel()
             description.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
             description.numberOfLines = 0
-            description.bind(to: workExperience[2])
+            description.text = workExperience[2]
             description.lineBreakMode = .byWordWrapping
             
             let nameStack = UIStackView()
@@ -147,13 +149,13 @@ class InfoViewController: UIViewController {
         infoViewModel.languages.forEach { language in
             let languageLabel = BoundLabel()
             languageLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            languageLabel.bind(to: language[0])
+            languageLabel.text = language[0]
             languageLabel.numberOfLines = 0
             languageLabel.textAlignment = .left
             
             let timeLabel = BoundLabel()
             timeLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            timeLabel.bind(to: language[1])
+            timeLabel.text = language[1]
             timeLabel.numberOfLines = 0
             timeLabel.textAlignment = .left
             

@@ -26,10 +26,11 @@ public class InformationViewModel {
     var skills: Observable<[String]> = Observable([String]())
     
     //MARK: - Work
-    var works: [[Observable<String>]] = [[Observable<String>]]()
+    var works: [[String]] = [[String]]()
+    var onFinish: (() -> Void)?
     
     //MARK: - Programming
-    var languages: [[Observable<String>]] = [[Observable<String>]]()
+    var languages: [[String]] = [[String]]()
     
     //MARK: - Education
     var university: Observable<String> = Observable("")
@@ -54,6 +55,16 @@ extension InformationViewModel {
         }
     }
     
+    func requestPhoto(from urlString: String?){
+        guard let url = urlString, let urlPhoto = URL(string: url) else { return }
+        Networking.shared.getImage(from: urlPhoto) { [weak self] image in
+            DispatchQueue.main.async {
+                self?.photo.value = image
+            }
+        }
+    }
+    
+    
     func updateValues() {
         guard let information = information else { return }
         name.value = information.firstName
@@ -67,15 +78,17 @@ extension InformationViewModel {
         cellphone.value = information.contactInfo.cellphone
         linkedin.value = information.contactInfo.linkedIn
         skills.value = information.skills
+        updateWorksValue()
     }
     
-    func requestPhoto(from urlString: String?){
-        guard let url = urlString, let urlPhoto = URL(string: url) else { return }
-        Networking.shared.getImage(from: urlPhoto) { [weak self] image in
-            DispatchQueue.main.async {
-                self?.photo.value = image
-            }
+    func updateWorksValue(){
+        information?.workExperience?.forEach { jobArray in
+            works.append(jobArray)
         }
+        information?.programming.forEach{ programmingArray in
+            languages.append(programmingArray)
+        }
+        onFinish?()
     }
     
 }

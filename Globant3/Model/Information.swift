@@ -15,7 +15,7 @@ struct Information: Codable {
     let contactInfo: ContactInfo
     let programming: [[String]]
     let schoolSummary: SchoolSummary
-    let workExperience: [[String]]
+    let workExperience: [[String]]?
 }
 
 // MARK: - ContactInfo
