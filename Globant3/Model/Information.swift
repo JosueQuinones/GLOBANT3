@@ -6,28 +6,29 @@ import Foundation
 
 // MARK: - Information
 struct Information: Codable {
-    let firstName, lastName, age, city: String
+    let firstName: String
+    let lastName: String
+    let age: String
+    let city: String
     let skills: [String]
     let contactInfo: ContactInfo
-    let programming: Programming
+    let programming: [[String]]
     let schoolSummary: SchoolSummary
     let workExperience: WorkExperience
 }
 
 // MARK: - ContactInfo
 struct ContactInfo: Codable {
-    let email, cellphone: String
+    let email: String
+    let cellphone: String
     let linkedIn: String
-}
-
-// MARK: - Programming
-struct Programming: Codable {
-    let languages: [[String]]
 }
 
 // MARK: - SchoolSummary
 struct SchoolSummary: Codable {
-    let university, carreer, generation: String
+    let university: String
+    let career: String
+    let generation: String
 }
 
 // MARK: - WorkExperience

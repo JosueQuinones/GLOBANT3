@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Globant3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InfoViewController" customModule="Globant3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLm-tg-ThA">
-                                        <rect key="frame" x="10" y="248" width="355" height="69.5"/>
+                                        <rect key="frame" x="10" y="248" width="355" height="230"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96Q-M5-6nj">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
@@ -129,10 +129,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="WRS-Pz-tF8">
-                                                <rect key="frame" x="8" y="41" width="339" height="20.5"/>
+                                                <rect key="frame" x="8" y="41" width="339" height="181"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjF-Kr-wqc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="181"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -149,11 +149,11 @@
                                             <constraint firstItem="WRS-Pz-tF8" firstAttribute="top" secondItem="96Q-M5-6nj" secondAttribute="bottom" constant="3" id="EcT-FH-HzC"/>
                                             <constraint firstAttribute="trailing" secondItem="96Q-M5-6nj" secondAttribute="trailing" constant="8" id="Gb8-aL-6Zn"/>
                                             <constraint firstItem="WRS-Pz-tF8" firstAttribute="leading" secondItem="RLm-tg-ThA" secondAttribute="leading" constant="8" id="ZOx-cx-oGG"/>
-                                            <constraint firstAttribute="height" priority="1" constant="230" id="ynw-Uf-BRp"/>
+                                            <constraint firstAttribute="height" constant="230" id="ynw-Uf-BRp"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-Hr-ezq">
-                                        <rect key="frame" x="10" y="325.5" width="355" height="69.5"/>
+                                        <rect key="frame" x="10" y="486" width="355" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18b-QQ-OqW">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
@@ -200,7 +200,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-tL-w4C">
-                                        <rect key="frame" x="10" y="403" width="355" height="69.5"/>
+                                        <rect key="frame" x="10" y="563.5" width="355" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programming title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGe-qX-EEL">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
@@ -247,7 +247,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9s-4v-r0B">
-                                        <rect key="frame" x="10" y="480.5" width="355" height="110.5"/>
+                                        <rect key="frame" x="10" y="641" width="355" height="110.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tG-E9-rhr">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
@@ -328,7 +328,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJA-Vw-5xg">
-                                        <rect key="frame" x="10" y="599" width="355" height="110.5"/>
+                                        <rect key="frame" x="10" y="759.5" width="355" height="110.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqc-T6-7Fa">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
@@ -450,6 +450,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <size key="freeformSize" width="375" height="1700"/>
+                    <connections>
+                        <outlet property="ageLbl" destination="m2X-7d-rc5" id="w4y-Kn-qa3"/>
+                        <outlet property="careerLbl" destination="aFL-4k-NsS" id="9lL-TI-Z8h"/>
+                        <outlet property="cellPhoneLbl" destination="hql-ds-wyJ" id="wqW-Rw-5pd"/>
+                        <outlet property="cityLbl" destination="a1b-gi-6ze" id="DgZ-F7-UD3"/>
+                        <outlet property="emailLbl" destination="J62-6j-rGe" id="JaY-Q3-hvg"/>
+                        <outlet property="firstNameLbl" destination="TG2-c2-jT2" id="lvj-EO-Dbu"/>
+                        <outlet property="generationLbl" destination="cgh-dQ-bP6" id="mhj-4b-4C4"/>
+                        <outlet property="lastNameLbl" destination="hfC-W9-NYd" id="RfN-x0-inf"/>
+                        <outlet property="linkedInLbl" destination="CGj-Db-egA" id="jCM-RR-Dzj"/>
+                        <outlet property="programmingStackView" destination="NFH-1J-hxJ" id="g7W-5Y-nEz"/>
+                        <outlet property="skillsLbl" destination="DjF-Kr-wqc" id="6SS-Be-VV0"/>
+                        <outlet property="universityLbl" destination="nHL-Ei-ZTL" id="QEG-Cq-g07"/>
+                        <outlet property="userImageView" destination="2sU-m1-cpt" id="5Ng-t9-e8t"/>
+                        <outlet property="workStackView" destination="QFt-mk-2q0" id="ORP-kt-knK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
