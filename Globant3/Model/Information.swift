@@ -14,7 +14,7 @@ struct Information: Codable {
     let contactInfo: ContactInfo
     let programming: [[String]]
     let schoolSummary: SchoolSummary
-    let workExperience: WorkExperience
+    let workExperience: [[String]]
 }
 
 // MARK: - ContactInfo
@@ -29,13 +29,4 @@ struct SchoolSummary: Codable {
     let university: String
     let career: String
     let generation: String
-}
-
-// MARK: - WorkExperience
-struct WorkExperience: Codable {
-    let jobs: [Job]?
-}
-
-struct Job: Codable {
-    let job: [String]
 }

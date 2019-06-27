@@ -33,8 +33,8 @@ public class InformationViewModel {
     }
     
     //MARK: - Work
-    var works: [Job]? {
-        return information?.workExperience.jobs
+    var works: [[String]]? {
+        return information?.workExperience
     }
     
     //MARK: - Programming

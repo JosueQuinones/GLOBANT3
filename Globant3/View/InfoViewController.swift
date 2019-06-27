@@ -37,7 +37,7 @@ class InfoViewController: UIViewController {
     }
     
     func petition() {
-        var information: Information? = Information(firstName: "", lastName: "", age: "", city: "", skills: [String](), contactInfo: ContactInfo(email: "", cellphone: "", linkedIn: ""), programming: [[String]](), schoolSummary: SchoolSummary(university: "", career: "", generation: ""), workExperience: WorkExperience(jobs: [Job]()))
+        var information: Information? = Information(firstName: "", lastName: "", age: "", city: "", skills: [String](), contactInfo: ContactInfo(email: "", cellphone: "", linkedIn: ""), programming: [[String]](), schoolSummary: SchoolSummary(university: "", career: "", generation: ""), workExperience: [[String]]())
         Networking.shared.getModel(model: information!) { model in
             self.infoViewModel.information = model
             DispatchQueue.main.async {
@@ -71,44 +71,61 @@ class InfoViewController: UIViewController {
         
         infoViewModel.works?.forEach { workExperience in
             let nameJobTitle = UILabel()
+            nameJobTitle.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
             nameJobTitle.text = "Name: "
             titles.append(nameJobTitle)
+            nameJobTitle.numberOfLines = 0
             
             let nameJob = UILabel()
-            nameJob.text = workExperience.job[0]
+            nameJob.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
+            nameJob.text = workExperience[0]
+            nameJobTitle.numberOfLines = 0
             
             let dateTitle = UILabel()
+            dateTitle.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
             dateTitle.text = "Start date: "
             titles.append(dateTitle)
+            dateTitle.numberOfLines = 0
             
             let date = UILabel()
-            date.text = workExperience.job[1]
+            date.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
+            date.text = workExperience[1]
+            date.numberOfLines = 0
             
             let descriptionTitle = UILabel()
+            descriptionTitle.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
             descriptionTitle.text = "Description: "
+            descriptionTitle.numberOfLines = 0
             titles.append(descriptionTitle)
             
             let description = UILabel()
-            description.text = workExperience.job[2]
+            description.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
+            description.numberOfLines = 0
+            description.text = workExperience[2]
+            description.lineBreakMode = .byWordWrapping
             
             let nameStack = UIStackView()
             nameStack.addArrangedSubview(nameJobTitle)
             nameStack.addArrangedSubview(nameJob)
-            nameStack.spacing = 15
+            nameStack.spacing = 30
             
             let dateStack = UIStackView()
             dateStack.addArrangedSubview(dateTitle)
             dateStack.addArrangedSubview(date)
-            dateStack.spacing = 15
+            dateStack.spacing = 30
             
             let descriptionStack = UIStackView()
             descriptionStack.addArrangedSubview(descriptionTitle)
             descriptionStack.addArrangedSubview(description)
-            descriptionStack.spacing = 15
+            descriptionStack.spacing = 30
             
             workStackView.addArrangedSubview(nameStack)
             workStackView.addArrangedSubview(dateStack)
             workStackView.addArrangedSubview(descriptionStack)
+        }
+        guard titles.count >= 2, let firstLabel = titles.first else { return }
+        for i in 1 ..< titles.count {
+            titles[i].widthAnchor.constraint(equalTo: firstLabel.widthAnchor, multiplier: 1).isActive = true
         }
     }
 }
