@@ -8,8 +8,8 @@
 "skills_title" = "Skills";
 "work_experience_title" = "Work Experience";
 "programming_languages_title" = "Programming Languages 💻";
-"school_summary_title" = "School Summary 📚";
-"contact_info_title" = "Contact Info";
+"school_summary_title" = "Education 📚";
+"contact_info_title" = "Contact Info 📞";
 
 /* Error */
 "Error" = "Something went wrong.";

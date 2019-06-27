@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  Globant3
 //
-//  Created by Ernesto Daniel Mejia Valdiviezo on 6/26/19.
 //  Copyright © 2019 Ernesto Daniel Mejia Valdiviezo. All rights reserved.
 //
 
@@ -26,22 +25,42 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var workStackView: UIStackView?
     @IBOutlet weak var programmingStackView: UIStackView!
     
+    //MARK: - Titles outletd
+    @IBOutlet weak var skillsTitleLbl: UILabel!
+    @IBOutlet weak var workTitleLbl: UILabel!
+    @IBOutlet weak var programmingTitleLbl: UILabel!
+    @IBOutlet weak var educationTitleLbl: UILabel!
+    @IBOutlet weak var contactTitleLbl: UILabel!
+    
+    
+    
     //MARK: - class variables
     var infoViewModel = InformationViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "main_title".localize()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         petition()
 //        configure()
     }
     
     func petition() {
-        var information: Information? = Information(firstName: "", lastName: "", age: "", city: "", skills: [String](), contactInfo: ContactInfo(email: "", cellphone: "", linkedIn: ""), programming: [[String]](), schoolSummary: SchoolSummary(university: "", career: "", generation: ""), workExperience: [[String]]())
-        Networking.shared.getModel(model: information!) { model in
-            self.infoViewModel.information = model
+        var information: Information? = Information(firstName: "", lastName: "", age: "", city: "", photo: nil, skills: [String](), contactInfo: ContactInfo(email: "", cellphone: "", linkedIn: ""), programming: [[String]](), schoolSummary: SchoolSummary(university: "", career: "", generation: ""), workExperience: [[String]]())
+        Networking.shared.getModel(model: information!) { [weak self] model in
+            self?.infoViewModel.information = model
             DispatchQueue.main.async {
-                self.configure()
+                self?.configure()
+            }
+            self?.requestPhoto(from: model?.photo)
+        }
+    }
+    
+    func requestPhoto(from urlString: String?){
+        guard let url = urlString, let urlPhoto = URL(string: url) else { return }
+        Networking.shared.getImage(from: urlPhoto) { [weak self] image in
+            DispatchQueue.main.async {
+                self?.userImageView.image = image
             }
         }
     }
@@ -50,6 +69,9 @@ class InfoViewController: UIViewController {
         configureMainView()
         configureSkillsView()
         configureWorkView()
+        configureProgrammingView()
+        configureEducationView()
+        configureContactView()
     }
 
     func configureMainView() {
@@ -60,10 +82,12 @@ class InfoViewController: UIViewController {
     }
     
     func configureSkillsView() {
+        skillsTitleLbl.text = "skills_title".localize()
         skillsLbl.text = infoViewModel.skills
     }
     
     func configureWorkView() {
+        workTitleLbl.text = "work_experience_title".localize()
         guard let workStackView = workStackView else { return }
         workStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
@@ -127,6 +151,48 @@ class InfoViewController: UIViewController {
         for i in 1 ..< titles.count {
             titles[i].widthAnchor.constraint(equalTo: firstLabel.widthAnchor, multiplier: 1).isActive = true
         }
+    }
+    
+    
+    func configureProgrammingView() {
+        programmingTitleLbl.text = "programming_languages_title".localize()
+        guard let programmingStackView = programmingStackView else { return }
+        programmingStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        infoViewModel.languages?.forEach { language in
+            let languageLabel = UILabel()
+            languageLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
+            languageLabel.text = language[0]
+            languageLabel.numberOfLines = 0
+            languageLabel.textAlignment = .left
+            
+            let timeLabel = UILabel()
+            timeLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
+            timeLabel.text = language[1]
+            timeLabel.numberOfLines = 0
+            timeLabel.textAlignment = .left
+            
+            let languageStackView = UIStackView()
+            languageStackView.addArrangedSubview(languageLabel)
+            languageStackView.addArrangedSubview(timeLabel)
+            languageStackView.spacing = 30
+            
+            programmingStackView.addArrangedSubview(languageStackView)
+        }
+    }
+    
+    func configureEducationView () {
+        educationTitleLbl.text = "school_summary_title".localize()
+        universityLbl.text = infoViewModel.university
+        careerLbl.text = infoViewModel.career
+        generationLbl.text = infoViewModel.generation
+    }
+    
+    func configureContactView(){
+        contactTitleLbl.text = "contact_info_title".localize()
+        emailLbl.text = infoViewModel.email
+        cellPhoneLbl.text = infoViewModel.cellphone
+        linkedInLbl.text = infoViewModel.linkedin
     }
 }
 

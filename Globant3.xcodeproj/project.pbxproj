@@ -541,7 +541,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/cd52628b1d52bc4ccc4a40153f125a469277db72/PersonalInfo.json";
+				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/3ef9b04cdfe21370369b3958ea9ce5f7f2799027/PersonalInfo.json";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -559,7 +559,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/cd52628b1d52bc4ccc4a40153f125a469277db72/PersonalInfo.json";
+				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/3ef9b04cdfe21370369b3958ea9ce5f7f2799027/PersonalInfo.json";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

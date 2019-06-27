@@ -10,6 +10,7 @@ struct Information: Codable {
     let lastName: String
     let age: String
     let city: String
+    let photo: String?
     let skills: [String]
     let contactInfo: ContactInfo
     let programming: [[String]]
