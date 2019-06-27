@@ -10,18 +10,18 @@ import UIKit
 class InfoViewController: UIViewController {
     
     //MARK: - IBOutlets
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var firstNameLbl: UILabel!
-    @IBOutlet weak var lastNameLbl: UILabel!
-    @IBOutlet weak var ageLbl: UILabel!
-    @IBOutlet weak var cityLbl: UILabel!
-    @IBOutlet weak var skillsLbl: UILabel!
-    @IBOutlet weak var universityLbl: UILabel!
-    @IBOutlet weak var careerLbl: UILabel!
-    @IBOutlet weak var generationLbl: UILabel!
-    @IBOutlet weak var emailLbl: UILabel!
-    @IBOutlet weak var cellPhoneLbl: UILabel!
-    @IBOutlet weak var linkedInLbl: UILabel!
+    @IBOutlet weak var userImageView: BoundImageView!
+    @IBOutlet weak var firstNameLbl: BoundLabel!
+    @IBOutlet weak var lastNameLbl: BoundLabel!
+    @IBOutlet weak var ageLbl: BoundLabel!
+    @IBOutlet weak var cityLbl: BoundLabel!
+    @IBOutlet weak var skillsLbl: BoundLabel!
+    @IBOutlet weak var universityLbl: BoundLabel!
+    @IBOutlet weak var careerLbl: BoundLabel!
+    @IBOutlet weak var generationLbl: BoundLabel!
+    @IBOutlet weak var emailLbl: BoundLabel!
+    @IBOutlet weak var cellPhoneLbl: BoundLabel!
+    @IBOutlet weak var linkedInLbl: BoundLabel!
     @IBOutlet weak var workStackView: UIStackView?
     @IBOutlet weak var programmingStackView: UIStackView!
     
@@ -41,28 +41,8 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         title = "main_title".localize()
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        petition()
-//        configure()
-    }
-    
-    func petition() {
-        var information: Information? = Information(firstName: "", lastName: "", age: "", city: "", photo: nil, skills: [String](), contactInfo: ContactInfo(email: "", cellphone: "", linkedIn: ""), programming: [[String]](), schoolSummary: SchoolSummary(university: "", career: "", generation: ""), workExperience: [[String]]())
-        Networking.shared.getModel(model: information!) { [weak self] model in
-            self?.infoViewModel.information = model
-            DispatchQueue.main.async {
-                self?.configure()
-            }
-            self?.requestPhoto(from: model?.photo)
-        }
-    }
-    
-    func requestPhoto(from urlString: String?){
-        guard let url = urlString, let urlPhoto = URL(string: url) else { return }
-        Networking.shared.getImage(from: urlPhoto) { [weak self] image in
-            DispatchQueue.main.async {
-                self?.userImageView.image = image
-            }
-        }
+        configure()
+        infoViewModel.petition()
     }
 
     func configure() {
@@ -72,18 +52,23 @@ class InfoViewController: UIViewController {
         configureProgrammingView()
         configureEducationView()
         configureContactView()
+        configureImageView()
+    }
+    
+    func configureImageView() {
+        userImageView.bind(to: infoViewModel.photo)
     }
 
     func configureMainView() {
-        firstNameLbl.text = infoViewModel.name
-        lastNameLbl.text = infoViewModel.lastname
-        ageLbl.text = infoViewModel.age
-        cityLbl.text = infoViewModel.city
+        firstNameLbl.bind(to: infoViewModel.name)
+        lastNameLbl.bind(to: infoViewModel.lastname)
+        ageLbl.bind(to: infoViewModel.age)
+        cityLbl.bind(to: infoViewModel.city)
     }
     
     func configureSkillsView() {
         skillsTitleLbl.text = "skills_title".localize()
-        skillsLbl.text = infoViewModel.skills
+        skillsLbl.bind(to: infoViewModel.skills)
     }
     
     func configureWorkView() {
@@ -93,16 +78,16 @@ class InfoViewController: UIViewController {
         
         var titles = [UILabel]()
         
-        infoViewModel.works?.forEach { workExperience in
+        infoViewModel.works.forEach { workExperience in
             let nameJobTitle = UILabel()
             nameJobTitle.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
             nameJobTitle.text = "Name: "
             titles.append(nameJobTitle)
             nameJobTitle.numberOfLines = 0
             
-            let nameJob = UILabel()
+            let nameJob = BoundLabel()
             nameJob.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            nameJob.text = workExperience[0]
+            nameJob.bind(to: workExperience[0])
             nameJobTitle.numberOfLines = 0
             
             let dateTitle = UILabel()
@@ -111,9 +96,9 @@ class InfoViewController: UIViewController {
             titles.append(dateTitle)
             dateTitle.numberOfLines = 0
             
-            let date = UILabel()
+            let date = BoundLabel()
             date.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            date.text = workExperience[1]
+            date.bind(to: workExperience[1])
             date.numberOfLines = 0
             
             let descriptionTitle = UILabel()
@@ -122,10 +107,10 @@ class InfoViewController: UIViewController {
             descriptionTitle.numberOfLines = 0
             titles.append(descriptionTitle)
             
-            let description = UILabel()
+            let description = BoundLabel()
             description.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
             description.numberOfLines = 0
-            description.text = workExperience[2]
+            description.bind(to: workExperience[2])
             description.lineBreakMode = .byWordWrapping
             
             let nameStack = UIStackView()
@@ -159,16 +144,16 @@ class InfoViewController: UIViewController {
         guard let programmingStackView = programmingStackView else { return }
         programmingStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
-        infoViewModel.languages?.forEach { language in
-            let languageLabel = UILabel()
+        infoViewModel.languages.forEach { language in
+            let languageLabel = BoundLabel()
             languageLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            languageLabel.text = language[0]
+            languageLabel.bind(to: language[0])
             languageLabel.numberOfLines = 0
             languageLabel.textAlignment = .left
             
-            let timeLabel = UILabel()
+            let timeLabel = BoundLabel()
             timeLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 17)
-            timeLabel.text = language[1]
+            timeLabel.bind(to: language[1])
             timeLabel.numberOfLines = 0
             timeLabel.textAlignment = .left
             
@@ -183,16 +168,16 @@ class InfoViewController: UIViewController {
     
     func configureEducationView () {
         educationTitleLbl.text = "school_summary_title".localize()
-        universityLbl.text = infoViewModel.university
-        careerLbl.text = infoViewModel.career
-        generationLbl.text = infoViewModel.generation
+        universityLbl.bind(to: infoViewModel.university)
+        careerLbl.bind(to: infoViewModel.career)
+        generationLbl.bind(to: infoViewModel.generation)
     }
     
     func configureContactView(){
         contactTitleLbl.text = "contact_info_title".localize()
-        emailLbl.text = infoViewModel.email
-        cellPhoneLbl.text = infoViewModel.cellphone
-        linkedInLbl.text = infoViewModel.linkedin
+        emailLbl.bind(to: infoViewModel.email)
+        cellPhoneLbl.bind(to: infoViewModel.cellphone)
+        linkedInLbl.bind(to: infoViewModel.linkedin)
     }
 }
 

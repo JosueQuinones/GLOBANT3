@@ -14,6 +14,7 @@
 		238EC55B22C446FB00F4145F /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55A22C446FB00F4145F /* String+Localize.swift */; };
 		238EC55C22C4475C00F4145F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 238EC55E22C4475C00F4145F /* Localizable.strings */; };
 		238EC56022C44E8E00F4145F /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55F22C44E8E00F4145F /* InformationViewModel.swift */; };
+		C095D73022C5280B006CDA9F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095D72F22C5280B006CDA9F /* Observable.swift */; };
 		C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */; };
 		C0B3F6B822C3FF05009153C3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6B722C3FF05009153C3 /* InfoViewController.swift */; };
 		C0B3F6BB22C3FF05009153C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B3F6B922C3FF05009153C3 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		238EC55A22C446FB00F4145F /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Localize.swift"; path = "Globant3/String+Localize.swift"; sourceTree = SOURCE_ROOT; };
 		238EC55D22C4475C00F4145F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		238EC55F22C44E8E00F4145F /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InformationViewModel.swift; path = Globant3/InformationViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C095D72F22C5280B006CDA9F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C0B3F6B222C3FF05009153C3 /* Globant3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globant3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0B3F6B722C3FF05009153C3 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				238EC55A22C446FB00F4145F /* String+Localize.swift */,
+				C095D72F22C5280B006CDA9F /* Observable.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				238EC55222C4153F00F4145F /* Networking.swift in Sources */,
 				238EC55622C41E8600F4145F /* Result.swift in Sources */,
 				238EC55B22C446FB00F4145F /* String+Localize.swift in Sources */,
+				C095D73022C5280B006CDA9F /* Observable.swift in Sources */,
 				238EC55422C41BEE00F4145F /* NetworkError.swift in Sources */,
 				C0B3F6B822C3FF05009153C3 /* InfoViewController.swift in Sources */,
 				C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */,
