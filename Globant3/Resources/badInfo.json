@@ -1,0 +1,26 @@
+{
+	"firstName": null,
+	"lastName": null,
+	"age": null,
+	"city": null,
+	"photo": null,
+	"skills": [null],
+	"contactInfo": {
+		"email": null,
+		"cellphone": null,
+		"linkedIn": null
+	},
+	"programming": [
+		["swift", null],
+		["sql", null],
+		["javascript", null],
+		["php", null],
+		["python", null]
+	],
+	"schoolSummary": {
+		"university": null,
+		"career": null,
+		"generation": null
+	},
+	"workExperience": [null]
+}

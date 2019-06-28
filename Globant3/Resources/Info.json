@@ -1,0 +1,30 @@
+{
+	"firstName": "Jonathan",
+	"lastName": "Wick",
+	"age": "33",
+	"city": "United States",
+	"photo": "https://www.gqmiddleeast.com/sites/default/files/gqme/styles/766_431_landscape/public/images/2019/04/21/John-Wick-Keanu-Reeves.jpg?itok=tJwVSoRn",
+	"skills": ["Great reflexe", "High pain tolerance", "Extreme durability", "Master martial artist", "Stealth", "Expert driver"],
+	"contactInfo": {
+		"email": "johnTheKiller365@gmail.com",
+		"cellphone": "+1 206-200-3393",
+		"linkedIn": "https://in.linkedin.com/in/john-wick-45a301158"
+	},
+	"programming": [
+		["swift", "10 months"],
+		["sql", "6 months"],
+		["javascript", "6 months"],
+		["php", "6 months"],
+		["python", "2 months"]
+	],
+	"schoolSummary": {
+		"university": "Punjab Technical University",
+		"career": "Certified Public Accountant",
+		"generation": "2005"
+	},
+	"workExperience": [
+		["Tarasov Industries", "August 2012", "I was a legendary hitman who worked for the Tarasov Mob until my retirement."],
+		["Army", "May 2009", "I served in the United States Marine Corps for three years doing different missions successfully and too many kills."],
+		["Cisco", "June 2006", "I was required to prepare and examine financial records. I made sure that records are accurate and that taxes were paid properly and on time."]
+	]
+}

@@ -7,7 +7,12 @@
 
 import UIKit
 
-public class InformationViewModel {
+protocol InformationViewModelProtocol {
+    var information: Information? { get set }
+    func updateValues()
+}
+
+public class InformationViewModel: InformationViewModelProtocol {
     
     //MARK: - Model instance
     var information: Information?
@@ -80,10 +85,10 @@ extension InformationViewModel {
         cellphone.value = information.contactInfo.cellphone
         linkedin.value = information.contactInfo.linkedIn
         skills.value = information.skills
-        updateWorksValue()
+        updateStacksValues()
     }
     
-    func updateWorksValue(){
+    func updateStacksValues(){
         information?.workExperience?.forEach { jobArray in
             works.append(jobArray)
         }

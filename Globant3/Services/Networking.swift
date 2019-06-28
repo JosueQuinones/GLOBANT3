@@ -4,15 +4,22 @@
 
 import UIKit
 
-public class Networking {
+protocol NetworkingProtocol {
+    var dataTask: URLSessionDataTask? { get set }
+    func getModel<Model: Codable>(model: Model, completion: @escaping (Model?) -> Void)
+    func getData(completion: @escaping (Result<Data, NetworkError>) -> Void)
+    func getImage(from url: URL, completion: @escaping (UIImage?) -> Void)
+}
+
+public class Networking: NetworkingProtocol {
     
     //MARK: - Information required for API
     private var baseURLString: String?
     private var endpoint: String?
     
     //MARK: - URLSession
-    private var defaultSession = URLSession(configuration: .default)
-    private var dataTask: URLSessionDataTask?
+    var defaultSession = URLSession(configuration: .default)
+    var dataTask: URLSessionDataTask?
     
     init() {
         baseURLString = getServerURL(from: "ServerURL")
@@ -24,13 +31,15 @@ public class Networking {
     }
     
     //MARK: - Get Image from url
-    public func getImage(from url: URL, completion: @escaping (UIImage) -> Void) {
+    func getImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         completion(image)
                     }
+                } else {
+                    completion(nil)
                 }
             }
         }
@@ -54,7 +63,7 @@ public class Networking {
     }
     
     //MARK: - Fetching data from service
-    private func getData(completion: @escaping (Result<Data, NetworkError>) -> Void) {
+    func getData(completion: @escaping (Result<Data, NetworkError>) -> Void) {
         if let url = urlAssemble(endpoint: endpoint) {
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 if let data = data, let _ = response as? HTTPURLResponse {
