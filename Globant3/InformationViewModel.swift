@@ -1,9 +1,6 @@
 //
 //  InformationViewModel.swift
 //  Globant3
-//
-//  Created by Josue Emanuel Quinones Rivera on 6/26/19.
-//
 
 import UIKit
 

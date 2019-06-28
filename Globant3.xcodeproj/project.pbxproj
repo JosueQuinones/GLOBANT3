@@ -574,10 +574,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3;
+				PRODUCT_BUNDLE_IDENTIFIER = Globant3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/3ef9b04cdfe21370369b3958ea9ce5f7f2799027/PersonalInfo.json";
+				ServerURL = "https://gist.githubusercontent.com/ay96-sudo/8c8b9e57e283adb5956c32858ec30997/raw/73d3e7101d7933981ccefed5d29b65cfb864d88c/gistfile1.txt";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -592,10 +592,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3;
+				PRODUCT_BUNDLE_IDENTIFIER = Globant3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				ServerURL = "https://gist.githubusercontent.com/em964/b9f51d2a2de6d7bb25360f2d78356866/raw/3ef9b04cdfe21370369b3958ea9ce5f7f2799027/PersonalInfo.json";
+				ServerURL = "https://gist.githubusercontent.com/ay96-sudo/8c8b9e57e283adb5956c32858ec30997/raw/73d3e7101d7933981ccefed5d29b65cfb864d88c/gistfile1.txt";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -612,7 +612,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = Globant3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -632,7 +632,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = Globant3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -651,7 +651,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Globant3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -670,7 +670,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ernesto.mejia.Globant3UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Globant3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
