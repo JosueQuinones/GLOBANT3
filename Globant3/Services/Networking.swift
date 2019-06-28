@@ -22,12 +22,12 @@ public class Networking: NetworkingProtocol {
     var dataTask: URLSessionDataTask?
     
     init() {
-        baseURLString = getServerURL(from: "ServerURL")
+        baseURLString = getServerURL(from: "SERVER_URL")
     }
     
     //MARK: - Auxiliar function for read serverURL
     private func getServerURL(from key: String) -> String? {
-        return Bundle.main.object(forInfoDictionaryKey: key) as? String
+        return Configuration.value(for: key)
     }
     
     //MARK: - Get Image from url

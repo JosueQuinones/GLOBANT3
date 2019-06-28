@@ -1,0 +1,7 @@
+//
+//  Globant3.xcconfig
+//  Globant3
+//
+
+SINGLE_SLASH=/
+SERVER_URL=https:/$(SINGLE_SLASH)gist.githubusercontent.com/ay96-sudo/8c8b9e57e283adb5956c32858ec30997/raw/73d3e7101d7933981ccefed5d29b65cfb864d88c/gistfile1.txt
