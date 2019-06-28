@@ -14,6 +14,10 @@
 		238EC55B22C446FB00F4145F /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55A22C446FB00F4145F /* String+Localize.swift */; };
 		238EC55C22C4475C00F4145F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 238EC55E22C4475C00F4145F /* Localizable.strings */; };
 		238EC56022C44E8E00F4145F /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC55F22C44E8E00F4145F /* InformationViewModel.swift */; };
+		238EC56322C57BA200F4145F /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC56222C57BA200F4145F /* MockNetworking.swift */; };
+		238EC56522C5824500F4145F /* Info.json in Resources */ = {isa = PBXBuildFile; fileRef = 238EC56422C5824500F4145F /* Info.json */; };
+		238EC56722C5910E00F4145F /* badInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 238EC56622C5910E00F4145F /* badInfo.json */; };
+		238EC56922C5925200F4145F /* JW.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 238EC56822C5925200F4145F /* JW.jpg */; };
 		C095D73022C5280B006CDA9F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095D72F22C5280B006CDA9F /* Observable.swift */; };
 		C095D73222C58103006CDA9F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095D73122C58103006CDA9F /* CardView.swift */; };
 		C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */; };
@@ -50,6 +54,10 @@
 		238EC55A22C446FB00F4145F /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Localize.swift"; path = "Globant3/String+Localize.swift"; sourceTree = SOURCE_ROOT; };
 		238EC55D22C4475C00F4145F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		238EC55F22C44E8E00F4145F /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InformationViewModel.swift; path = Globant3/InformationViewModel.swift; sourceTree = SOURCE_ROOT; };
+		238EC56222C57BA200F4145F /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
+		238EC56422C5824500F4145F /* Info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Info.json; sourceTree = "<group>"; };
+		238EC56622C5910E00F4145F /* badInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = badInfo.json; sourceTree = "<group>"; };
+		238EC56822C5925200F4145F /* JW.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JW.jpg; sourceTree = "<group>"; };
 		C095D72F22C5280B006CDA9F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C095D73122C58103006CDA9F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C0B3F6B222C3FF05009153C3 /* Globant3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globant3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +118,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		238EC56122C57B5100F4145F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				238EC56222C57BA200F4145F /* MockNetworking.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		C0B3F6A922C3FF05009153C3 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +149,7 @@
 		C0B3F6B422C3FF05009153C3 /* Globant3 */ = {
 			isa = PBXGroup;
 			children = (
+				238EC56122C57B5100F4145F /* Mocks */,
 				238EC55722C439C700F4145F /* Model */,
 				238EC55022C4151800F4145F /* Services */,
 				C0B3F6E322C40781009153C3 /* View */,
@@ -191,6 +208,9 @@
 		C0B3F6E622C407CE009153C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				238EC56622C5910E00F4145F /* badInfo.json */,
+				238EC56422C5824500F4145F /* Info.json */,
+				238EC56822C5925200F4145F /* JW.jpg */,
 				C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */,
 				C0B3F6BC22C3FF07009153C3 /* Assets.xcassets */,
 				C0B3F6C122C3FF07009153C3 /* Info.plist */,
@@ -323,7 +343,10 @@
 				C0B3F6C022C3FF07009153C3 /* LaunchScreen.storyboard in Resources */,
 				238EC55C22C4475C00F4145F /* Localizable.strings in Resources */,
 				C0B3F6BD22C3FF07009153C3 /* Assets.xcassets in Resources */,
+				238EC56722C5910E00F4145F /* badInfo.json in Resources */,
 				C0B3F6BB22C3FF05009153C3 /* Main.storyboard in Resources */,
+				238EC56522C5824500F4145F /* Info.json in Resources */,
+				238EC56922C5925200F4145F /* JW.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +379,7 @@
 				C095D73022C5280B006CDA9F /* Observable.swift in Sources */,
 				238EC55422C41BEE00F4145F /* NetworkError.swift in Sources */,
 				C0B3F6B822C3FF05009153C3 /* InfoViewController.swift in Sources */,
+				238EC56322C57BA200F4145F /* MockNetworking.swift in Sources */,
 				C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */,
 				238EC56022C44E8E00F4145F /* InformationViewModel.swift in Sources */,
 			);
