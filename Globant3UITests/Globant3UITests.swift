@@ -5,26 +5,76 @@
 import XCTest
 
 class Globant3UITests: XCTestCase {
+    
+    let app = XCUIApplication()
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launch()
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testProfileImageViewExists() {
+        XCTAssertTrue(app.images["profileImageView"].exists)
     }
-
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testNameLabelExists() {
+        XCTAssertTrue(app.staticTexts["nameLabel"].exists)
+    }
+    
+    func testLastnameLabelExists() {
+        XCTAssertTrue(app.staticTexts["lastnameLabel"].exists)
+    }
+    
+    func testAgeLabelExists() {
+        XCTAssertTrue(app.staticTexts["ageLabel"].exists)
+    }
+    
+    func testCityLabelExists() {
+        XCTAssertTrue(app.staticTexts["cityLabel"].exists)
+    }
+    
+    func testSkillsTitleExists() {
+        XCTAssertTrue(app.otherElements["Skills"].exists)
+    }
+    
+    func testWorkTitleExists() {
+        XCTAssertTrue(app.staticTexts["workTitle"].exists)
+    }
+    
+    func testProgrammingTitleExists() {
+        XCTAssertTrue(app.staticTexts["programmingTitle"].exists)
+    }
+    
+    func testEducationTitleExists() {
+        XCTAssertTrue(app.staticTexts["educationTitle"].exists)
+    }
+    
+    func testUniversityLabelExists() {
+        XCTAssertTrue(app.staticTexts["universityLabel"].exists)
+    }
+    
+    func testCareerLabelExists() {
+        XCTAssertTrue(app.staticTexts["careerLabel"].exists)
+    }
+    
+    func testGenerationLabelExists() {
+        XCTAssertTrue(app.staticTexts["generationLabel"].exists)
+    }
+    
+    func testContactTitleExists() {
+        XCTAssertTrue(app.staticTexts["contactTitle"].exists)
+    }
+    
+    func testEmailLabelExists() {
+        XCTAssertTrue(app.staticTexts["emailLabel"].exists)
+    }
+    
+    func testCellLabelExists() {
+        XCTAssertTrue(app.staticTexts["cellLabel"].exists)
+    }
+    
+    func testLinkLabelExists() {
+        XCTAssertTrue(app.staticTexts["linkLabel"].exists)
     }
 
 }

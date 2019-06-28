@@ -9,7 +9,6 @@ import UIKit
 
 protocol InformationViewModelProtocol {
     var information: Information? { get set }
-    func updateValues()
 }
 
 public class InformationViewModel: InformationViewModelProtocol {

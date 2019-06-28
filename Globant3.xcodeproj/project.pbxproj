@@ -18,6 +18,7 @@
 		238EC56522C5824500F4145F /* Info.json in Resources */ = {isa = PBXBuildFile; fileRef = 238EC56422C5824500F4145F /* Info.json */; };
 		238EC56722C5910E00F4145F /* badInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 238EC56622C5910E00F4145F /* badInfo.json */; };
 		238EC56922C5925200F4145F /* JW.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 238EC56822C5925200F4145F /* JW.jpg */; };
+		238EC56B22C59CD500F4145F /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EC56A22C59CD500F4145F /* MockViewModel.swift */; };
 		C095D73022C5280B006CDA9F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095D72F22C5280B006CDA9F /* Observable.swift */; };
 		C095D73222C58103006CDA9F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095D73122C58103006CDA9F /* CardView.swift */; };
 		C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B3F6B522C3FF05009153C3 /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		238EC56422C5824500F4145F /* Info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Info.json; sourceTree = "<group>"; };
 		238EC56622C5910E00F4145F /* badInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = badInfo.json; sourceTree = "<group>"; };
 		238EC56822C5925200F4145F /* JW.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JW.jpg; sourceTree = "<group>"; };
+		238EC56A22C59CD500F4145F /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
 		C095D72F22C5280B006CDA9F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C095D73122C58103006CDA9F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C0B3F6B222C3FF05009153C3 /* Globant3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globant3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				238EC56222C57BA200F4145F /* MockNetworking.swift */,
+				238EC56A22C59CD500F4145F /* MockViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				C095D73022C5280B006CDA9F /* Observable.swift in Sources */,
 				238EC55422C41BEE00F4145F /* NetworkError.swift in Sources */,
 				C0B3F6B822C3FF05009153C3 /* InfoViewController.swift in Sources */,
+				238EC56B22C59CD500F4145F /* MockViewModel.swift in Sources */,
 				238EC56322C57BA200F4145F /* MockNetworking.swift in Sources */,
 				C0B3F6B622C3FF05009153C3 /* AppDelegate.swift in Sources */,
 				238EC56022C44E8E00F4145F /* InformationViewModel.swift in Sources */,
