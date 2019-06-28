@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JTK-EI-iiq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JTK-EI-iiq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,6 +26,9 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2sU-m1-cpt" customClass="BoundImageView" customModule="Globant3" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="130" height="184"/>
+                                                <accessibility key="accessibilityConfiguration" hint="profileImageView" identifier="profileImageView" label="profileImageView">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="frC-y9-I4j"/>
                                                 </constraints>
@@ -44,6 +47,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TG2-c2-jT2" userLabel="nameLbl" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="100.5" y="0.0" width="100.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="nameLabel" identifier="nameLabel" label="nameLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -61,6 +65,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfC-W9-NYd" userLabel="nameLbl" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="100.5" y="0.0" width="100.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="lastnameLabel" identifier="lastnameLabel" label="lastnameLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -78,6 +83,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2X-7d-rc5" userLabel="nameLbl" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="100.5" y="0.0" width="100.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="ageLabel" identifier="ageLabel" label="ageLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -95,6 +101,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1b-gi-6ze" userLabel="nameLbl" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="100.5" y="0.0" width="100.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="cityLabel" identifier="cityLabel" label="cityLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -127,6 +134,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96Q-M5-6nj">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" hint="skillsTitle" identifier="skillsTitle" label="skillsTitle"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="m6B-Hf-fSS"/>
                                                 </constraints>
@@ -139,6 +147,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjF-Kr-wqc" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="339" height="20.5"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="skillsLabel" identifier="skillsLabel" label="skillsLabel"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -147,6 +156,9 @@
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Skills">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstItem="96Q-M5-6nj" firstAttribute="top" secondItem="RLm-tg-ThA" secondAttribute="top" constant="8" id="5sP-Vo-2kq"/>
                                             <constraint firstItem="96Q-M5-6nj" firstAttribute="leading" secondItem="RLm-tg-ThA" secondAttribute="leading" constant="8" id="66G-gQ-VJS"/>
@@ -169,6 +181,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18b-QQ-OqW">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" hint="workTitle" identifier="workTitle" label="workTitle"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="e4U-A4-0xO"/>
                                                 </constraints>
@@ -222,6 +235,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programming title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGe-qX-EEL">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" hint="programmingTitle" identifier="programmingTitle" label="programmingTitle"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ICb-FB-cc4"/>
                                                 </constraints>
@@ -275,6 +289,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tG-E9-rhr">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" hint="educationTitle" identifier="educationTitle" label="educationTitle"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="OVE-fp-aFg"/>
                                                 </constraints>
@@ -296,6 +311,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHL-Ei-ZTL" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="169.5" y="0.0" width="169.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="universityLabel" identifier="universityLabel" label="universityLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -313,6 +329,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-4k-NsS" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="169.5" y="0.0" width="169.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="careerLabel" identifier="careerLabel" label="careerLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -330,6 +347,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgh-dQ-bP6" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="169.5" y="0.0" width="169.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="generationLabel" identifier="generationLabel" label="generationLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -362,6 +380,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqc-T6-7Fa">
                                                 <rect key="frame" x="8" y="8" width="339" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" hint="contactTitle" identifier="contactTitle" label="contactTitle"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="hyD-RP-Jey"/>
                                                 </constraints>
@@ -383,6 +402,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J62-6j-rGe" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="169.5" y="0.0" width="169.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="emailLabel" identifier="emailLabel" label="emailLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -400,6 +420,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hql-ds-wyJ" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="169.5" y="0.0" width="169.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="cellLabel" identifier="cellLabel" label="cellLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -417,6 +438,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGj-Db-egA" customClass="BoundLabel" customModule="Globant3" customModuleProvider="target">
                                                                 <rect key="frame" x="169.5" y="0.0" width="169.5" height="20.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="linkLabel" identifier="linkLabel" label="linkLabel"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
